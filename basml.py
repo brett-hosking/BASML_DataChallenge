@@ -44,6 +44,7 @@ def loaddata(path,classlist=[None], height=None, width=None, channels=None,label
 	'''
 	if classlist[0] == None:
 		classlist	= os.listdir(path)
+		if '.DS_Store' in classlist: classlist.remove('.DS_Store')
 	else:
 		classlist	= classlist
 
@@ -194,3 +195,9 @@ def save_image(arr,output):
         None
     '''
     imageio.imwrite(output,np.clip(arr,0,255).astype('uint8'))
+
+def accuracy(true,pred):
+	'''
+	Input true and predicted one-hot labels and calculate the accuracy of the model
+	'''
+	return (np.sum(np.argmax(true,axis=1) == np.argmax(pred,axis=1))/ len(true)) * 100.0

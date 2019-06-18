@@ -37,7 +37,7 @@ def loaddata(path,classlist=[None], height=None, width=None, channels=None,label
 		Feature matrix of shape (Total number of images, height, width, channels)
 	Y : ndarray
 		Labels of shape (Total number of images, total number of classes)
-	cat_list : list of strings
+	classlist : list of strings
 		list of class names
 		if labelstr=True
 

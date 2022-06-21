@@ -1,5 +1,5 @@
 jupyter==1.0.0 
-numpy==1.16.4
+numpy==1.22.0
 tensorflow==1.13.1
 # requests==2.22.0  
 imageio==2.5.0 
